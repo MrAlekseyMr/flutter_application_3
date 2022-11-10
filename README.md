@@ -24,16 +24,82 @@
 
 5.	Затем создадим файлы моделей:
 
-![Изображение с Imgur. Пункт 5](https://i.imgur.com/3nq4lUn.png)
+5.1.	Модель UserEntity:
 
+![Изображение с Imgur. Пункт 5.1](https://i.imgur.com/yCCsQAA.png)
 
+5.2.	Модель RoleEntity:
 
+![Изображение с Imgur. Пункт 5.2](https://i.imgur.com/3Sbyb68.png)
 
+5.3.	Модель ProductEntity:
 
+![Изображение с Imgur. Пункт 5.3](https://i.imgur.com/VbtGi8P.png)
 
+5.4.	Модель OrderEntity:
 
-7.	Из пункта III.6 проделаем это несколько раз, изменим цвета кнопок и наименования мелодий
+![Изображение с Imgur. Пункт 5.4](https://i.imgur.com/DEKFwqG.png)
 
-![Изображение с Imgur. Пункт III.7](https://i.imgur.com/lTQzfYA.png)
+5.5.	Модель ManufactureEntity:
 
-## Вывод: создал 3 экрана при помощи Flutter по макету в Figma, закрепил ранее полученные знания и навыки по верстке в Flutter.
+![Изображение с Imgur. Пункт 5.5](https://i.imgur.com/18YxBzE.png)
+
+5.6.	Модель FilialCountProductEntity:
+
+![Изображение с Imgur. Пункт 5.6](https://i.imgur.com/osnLnTb.png)
+
+5.7.	Модель FilialEntity:
+
+![Изображение с Imgur. Пункт 5.7](https://i.imgur.com/XGJErVB.png)
+
+5.8.	Модель CustomerEntity:
+
+![Изображение с Imgur. Пункт 5.8](https://i.imgur.com/nb5lzAL.png)
+
+5.9.	Модель CategoryEntity:
+
+![Изображение с Imgur. Пункт 5.9](https://i.imgur.com/Zo0WZYu.png)
+
+6.	И создадим файлы для работы с моделями:
+
+6.1.	Класс User:
+
+![Изображение с Imgur. Пункт 6.1](https://i.imgur.com/wb4zcqy.png)
+
+6.2.	Класс Role:
+
+![Изображение с Imgur. Пункт 6.2](https://i.imgur.com/oDIKuoL.png)
+
+6.3.	Класс Product:
+
+![Изображение с Imgur. Пункт 6.3](https://i.imgur.com/LhgzeDj.png)
+
+6.4.	Класс Order:
+
+![Изображение с Imgur. Пункт 6.4](https://i.imgur.com/20sRzLY.png)
+
+6.5.	Класс Manufacture:
+
+![Изображение с Imgur. Пункт 6.5](https://i.imgur.com/PUo6Lif.png)
+
+6.6.	Класс FilialCountProduct:
+
+![Изображение с Imgur. Пункт 6.6](https://i.imgur.com/1Fhi467.png)
+
+6.7.	Класс Filial:
+
+![Изображение с Imgur. Пункт 6.7](https://i.imgur.com/y204Wd2.png)
+
+6.8.	Класс Customer:
+
+![Изображение с Imgur. Пункт 6.8](https://i.imgur.com/aXvZ4JG.png)
+
+6.9.	Класс Category:
+
+![Изображение с Imgur. Пункт 6.9](https://i.imgur.com/j50XPSf.png)
+
+7.	Результат:
+
+![Изображение с Imgur. Пункт 7](https://i.imgur.com/hfNHu2v.png)
+
+## Вывод: в рамках данной практической работы были получены навыки с работай с SQLite в языке программирования Dart. Построены 9 моделей для таблиц.
