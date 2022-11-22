@@ -41,19 +41,19 @@ abstract class DataBaseRequest {
 
   /// Запрос для создания таблицы User
   static const String _createTableUsers =
-      'CREATE TABLE "$tableUser" ("id"	INTEGER,"login"	TEXT NOT NULL UNIQUE,"password"	TEXT NOT NULL,"id_role"	INTEGER,FOREIGN KEY("id_role") REFERENCES "Role"("id") ON DELETE CASCADE,PRIMARY KEY("id" AUTOINCREMENT) )';
+      'CREATE TABLE "$tableUser" ("id" INTEGER,"login" TEXT NOT NULL UNIQUE,"password"	TEXT NOT NULL,"id_role"	INTEGER,FOREIGN KEY("id_role") REFERENCES "Role"("id") ON DELETE CASCADE,PRIMARY KEY("id" AUTOINCREMENT) )';
 
   /// Запрос для создания таблицы Category
   static const String _createTableCategory =
-      'CREATE TABLE "$tableCategory" ("id"	INTEGER,"namecategory" TEXT NOT NULL UNIQUE, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableCategory" ("id"	INTEGER, "namecategory" TEXT NOT NULL UNIQUE, PRIMARY KEY("id" AUTOINCREMENT))';
 
   /// Запрос для создания таблицы Manufacture
   static const String _createTableManufacture =
-      'CREATE TABLE "$tableManufacture" ("id"	INTEGER,"namemanufacture" TEXT NOT NULL UNIQUE, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableManufacture" ("id"	INTEGER, "namemanufacture" TEXT NOT NULL UNIQUE, PRIMARY KEY("id" AUTOINCREMENT))';
 
   /// Запрос для создания таблицы Product
   static const String _createTableProduct =
-      'CREATE TABLE "$tableProduct" ("id"	INTEGER,"nameproduct" TEXT NOT NULL UNIQUE, "price" REAL NOT NULL, "id_category" INTEGER NOT NULL, FOREIGN KEY("id_category") REFERENCES "category"("id") ON DELETE CASCADE, "id_manufacture" INTEGER NOT NULL, FOREIGN KEY("id_manufacture") REFERENCES "manufacture"("id") ON DELETE CASCADE, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableProduct" ("id"	INTEGER, "nameproduct" TEXT NOT NULL UNIQUE, "price" REAL NOT NULL, "id_category" INTEGER NOT NULL, "id_manufacture" INTEGER NOT NULL, FOREIGN KEY("id_category") REFERENCES "Category"("id") ON DELETE CASCADE, FOREIGN KEY("id_manufacture") REFERENCES "manufacture"("id") ON DELETE CASCADE, PRIMARY KEY("id" AUTOINCREMENT))';
 
   /// Запрос для создания таблицы Filial
   static const String _createTableFilial =
@@ -61,7 +61,7 @@ abstract class DataBaseRequest {
 
   /// Запрос для создания таблицы FilialCountProduct
   static const String _createTableFilialCountProduct =
-      'CREATE TABLE "$tableFilialCountProduct" ("id"	INTEGER,"countfilial" INTEGER NOT NULL, "id_product" INTEGER NOT NULL, FOREIGN KEY("id_product") REFERENCES "product"("id") ON DELETE CASCADE, "id_filial" INTEGER NOT NULL, FOREIGN KEY("id_filial") REFERENCES "filial"("id") ON DELETE CASCADE, "id_manufacture" INTEGER NOT NULL, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableFilialCountProduct" ("id"	INTEGER,"countfilial" INTEGER NOT NULL, "id_filial" INTEGER NOT NULL, "id_product" INTEGER NOT NULL, FOREIGN KEY("id_product") REFERENCES "product"("id") ON DELETE CASCADE, FOREIGN KEY("id_filial") REFERENCES "filial"("id") ON DELETE CASCADE, PRIMARY KEY("id" AUTOINCREMENT))';
 
   /// Запрос для создания таблицы Customers
   static const String _createtableCustomers =
@@ -69,5 +69,5 @@ abstract class DataBaseRequest {
 
   /// Запрос для создания таблицы Order
   static const String _createtableOrder =
-      'CREATE TABLE "$tableOrder" ("id"	INTEGER, "nomerorder" TEXT NOT NULL, "countproduct" INTEGER NOT NULL, "id_user" INTEGER NOT NULL, FOREIGN KEY("id_user") REFERENCES "user"("id") ON DELETE CASCADE, "id_product" INTEGER NOT NULL, FOREIGN KEY("id_product") REFERENCES "product"("id") ON DELETE CASCADE, PRIMARY KEY("id" AUTOINCREMENT))';
+      'CREATE TABLE "$tableOrder" ("id"	INTEGER, "nomerorder" TEXT NOT NULL, "countproduct" INTEGER NOT NULL, "id_user" INTEGER NOT NULL, "id_product" INTEGER NOT NULL, FOREIGN KEY("id_user") REFERENCES "user"("id") ON DELETE CASCADE, FOREIGN KEY("id_product") REFERENCES "product"("id") ON DELETE CASCADE, PRIMARY KEY("id" AUTOINCREMENT))';
 }
